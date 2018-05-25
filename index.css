@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/background-pizza-11.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#edamam-badge {
+    display: none;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.links {
+    text-align: center;
+    color: mediumblue;
+}
+
+.links:hover {
+    color: limegreen;
+}
+
+.youTubeContainer {
+    text-align: center;
+}
+
+.column {
+    width: 30%;
+    margin: 1.5%;
+    padding: 2%;
+    float: left;
+
+
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 1%;
+    color: darkred;
+    background-color: white;
+    opacity: .70;
+    width: 100%;
+
+}
+
+h2 {
+    text-align: center;
+    color: red;
+    font-size: 2em;
+    background-color: white;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.3em;
+    text-decoration: underline;
+    color: black;
+}
+
+h3:hover {
+    color: dark darkred;
+}
+
+h4 {
+    color: black;
+    font-size: 1.5em;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#restaurantResults {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.column2 {
+    /*background-color: rgba(230, 225, 98, .8);*/
+}
+
+button {
+    border-top: 1px solid #96d1f8;
+    background: #d6a765;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9c3e3e), to(#d6a765));
+    background: -webkit-linear-gradient(top, #9c3e3e, #d6a765);
+    background: -moz-linear-gradient(top, #9c3e3e, #d6a765);
+    background: -ms-linear-gradient(top, #9c3e3e, #d6a765);
+    background: -o-linear-gradient(top, #9c3e3e, #d6a765);
+    padding: 10.5px 21px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+    color: white;
+    font-size: 24px;
+    font-family: Georgia, Serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+button:hover {
+    border-top-color: #782828;
+    background: #782828;
+    color: #ccc;
+}
+
+button:active {
+    border-top-color: #5c1b1b;
+    background: #5c1b1b;
+}
+
+.hover {
+    transition: all .3s ease-out;
+}
+
+.hover:hover {
+    background-color: white;
+    box-shadow: 0 2px 0 rgba(159, 105, 240, .9);
+    transform: translate(0px, -10px);
+
+}
+
+
+.inputGroup {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+}
+
+.form {
+    text-align: center;
+}
+
+label {
+    display: block;
+    width: 25%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+}
+
+input {
+    width: 100%;
+    height: 6vh;
+    font-size: 1em;
+    border: .5px solid rgba(159, 105, 240, .3);
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.labelText {
+    color: black;
+    font-size: 1.0em;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+::placeholder {
+    color: lightgrey;
+
+}
+
+.moodInTitle {
+    color: rgba(240, 159, 32, .9);
+}
+
+img {
+    width: 100%;
+}
+
+#errorCity,
+#errorFood {
+    color: red;
+}
+
+
+@media only screen and (max-width: 720px) {
+
+    .column {
+        width: 100%;
+
+    }
+
+    img {
+        width: 50%;
+    }
+
+    .hover {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    ::placeholder {
+        visibility: hidden;
+    }
+
+    label {
+        text-align: center;
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+    .labelText {
+        font-size: 1.0em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 150%;
+    }
+
+    input {
+        width: 100%;
+        height: 6vh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    label {
+        text-align: center;
+        width: 45%;
+    }
+}

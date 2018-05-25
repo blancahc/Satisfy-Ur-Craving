@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>API Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Tajawal" rel="stylesheet">
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+</head>
+
+<body>
+    <header role="banner">
+        <h1>Satisfy Your Craving</h1>
+    </header>
+    <main role="main" aria-live="assertive">
+        <form class="form">
+            <section class="inputGroup">
+                <header>
+                    <h4>Find recipes and restaurants to satisfy your cravings</h4>
+                </header>
+                <label for="search"><span class="labelText">Enter food:</span>
+                        <input type="text" placeholder="Pizza" name="search" id="search">
+                        <span id="errorFood"></span>
+                    </label>
+                <label for="city"><span class="labelText">Enter city:</span>
+                        <input type="text" placeholder="San Jose, CA" name="search" id="city">
+                        <span id="errorCity"></span>
+                    </label>
+                </br>
+                <button type="submit">See Results! </button>
+            </section>
+        </form>
+
+        <section class="row">
+            <section class="column">
+                <header class="youtubeHeader">
+
+                </header>
+                <p id="youtubeResults"></p>
+            </section>
+
+            <section class="column column2">
+                <header class="recipesHeader">
+
+                </header>
+                <p id="recipeResults"></p>
+            </section>
+
+            <section class="column">
+                <header class="restaurantsHeader">
+
+                </header>
+                <p id="restaurantResults"></p>
+            </section>
+
+            <section id="edamam-badge" data-color="white"></section>
+        </section>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
