@@ -133,7 +133,7 @@ function submitHandler() {
         let city = $("#city").val();
 
         if (searchTerm === "" && city === "") {
-            $("#errorFood").html("Oops, enter a food, turkey!");
+            $("#errorFood").html("Oops, enter a food");
             $("#errorCity").html("Oops, enter a city please");
         } else if (city === "") {
             $("#errorCity").html("Oops, enter a city");
