@@ -17,8 +17,27 @@ function restaurantRequest(searchTerm, city, callback) {
         client_id: 'QG4SQH5BFABB4D5YVEMC5PD4IHEU4UJBMAK3FWVERQ4JS1YJ',
         client_secret: 'U3VKEED1ES2N4M54K3RLAYLMQNVVDISGP4C01MUUZWA3E1XX'
     }
+    let result = $.ajax({
+            /* update API end point */
+            url: RESTAURANT_URL,
+            data: query,
+            dataType: "json",
+            /*set the call type GET / POST*/
+            type: "GET"
+        })
+        /* if the call is successful (status 200 OK) show results */
+        .done(function (result) {
+            /* if the results are meeningful, we can just console.log them */
+            console.log(result);
+            callbackRestaurant(result);
+        })
+        /* if the call is NOT successful show errors */
+        .fail(function (jqXHR, error, errorThrown) {
+            console.log(jqXHR);
+            console.log(error);
+            console.log(errorThrown);
+        });
 
-    $.getJSON(RESTAURANT_URL, query, callback);
 }
 
 //what to do with the foursquare data that's sent back
@@ -35,7 +54,7 @@ function renderRestaurants(item) {
     const restaurantAddress = item.venue.location.address;
     const restaurantUrl = item.venue.url;
     const restaurantRating = item.venue.rating;
-    const restaurantMessage = item.tips["0"].text;
+    //    const restaurantMessage = item.tips["0"].text;
 
     return `<div class="hover">
 <h3><a href='${restaurantUrl}' class='links'>${restaurantName}</a></h3>
@@ -43,7 +62,7 @@ function renderRestaurants(item) {
 <li>Phone: ${restaurantNumber || ""}</li>
 <li>Address: ${restaurantAddress || ""}</li>
 <li>Rating: ${restaurantRating || ""}</li>
-<li>Customer feedback: "${restaurantMessage || ""}"</li>
+
 
 </ul>
 </br>
@@ -138,7 +157,7 @@ function submitHandler() {
         } else if (city === "") {
             $("#errorCity").html("Oops, enter a city");
         } else if (searchTerm === "") {
-            $("#errorFood").html("Oops, enter a food turkey");
+            $("#errorFood").html("Oops, enter a food");
         } else {
             $("#errorCity").html("");
             $("#errorFood").html("");
