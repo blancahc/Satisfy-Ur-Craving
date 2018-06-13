@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 
 const YOUTUBE_URL = "https://www.googleapis.com/youtube/v3/search";
-const youtubeKey = "AIzaSyDnPT4EujVD-K1SE7JjJGXP19eW8AvAraQ";
+const youtubeKey = "AIzaSyBJeBAM0hFlN4U8owRBqCyXxUD4QkZD2t0";
 const FOOD_URL = "https://api.edamam.com/search";
 const foodId = "7fd223ec";
 const foodKey = "817ee5945f6f33e30affd1cededc234a";
@@ -9,7 +9,7 @@ const RESTAURANT_URL = "https://api.foursquare.com/v2/venues/explore";
 
 //request to foursquare API
 function restaurantRequest(searchTerm, city, callback) {
-    const query = {
+    let query = {
         near: `${city}`,
         query: `${searchTerm}`,
         v: 20180224,
@@ -27,7 +27,7 @@ function restaurantRequest(searchTerm, city, callback) {
         })
         /* if the call is successful (status 200 OK) show results */
         .done(function (result) {
-            /* if the results are meeningful, we can just console.log them */
+            /* if the results are meaningful, we can just console.log them */
             console.log(result);
             callbackRestaurant(result);
         })
@@ -43,27 +43,26 @@ function restaurantRequest(searchTerm, city, callback) {
 //what to do with the foursquare data that's sent back
 function callbackRestaurant(data) {
     console.log(data);
-    const display = data.response.groups["0"].items.map((item, index) => renderRestaurants(item));
+    let display = data.response.groups['0'].items.map((item, index) => renderRestaurants(item));
     $("#restaurantResults").html(display);
 }
 
 //how to show the data from foursquare on the page
 function renderRestaurants(item) {
-    const restaurantName = item.venue.name;
-    const restaurantNumber = item.venue.contact.formattedPhone;
-    const restaurantAddress = item.venue.location.address;
-    const restaurantUrl = item.venue.url;
-    const restaurantRating = item.venue.rating;
+    let restaurantName = item.venue.name;
+    let restaurantNumber = item.venue.contact.formattedPhone;
+    let restaurantAddress = item.venue.location.address;
+    let restaurantUrl = item.venue.url;
+    let restaurantRating = item.venue.rating;
     //    const restaurantMessage = item.tips["0"].text;
 
-    return `<div class="hover">
+    return `<div class="hover resultsBackground restaurantBackground">
+<div class="restaurantPicture">
+
+</div>
 <h3><a href='${restaurantUrl}' class='links'>${restaurantName}</a></h3>
 <ul>
-<li>Phone: ${restaurantNumber || ""}</li>
 <li>Address: ${restaurantAddress || ""}</li>
-<li>Rating: ${restaurantRating || ""}</li>
-
-
 </ul>
 </br>
 </br>
@@ -77,31 +76,53 @@ function renderRestaurants(item) {
 
 //request to Edamam API
 function recipeRequest(searchTerm, callback) {
-    const query = {
+    let query = {
         q: `${searchTerm}`,
         app_id: `${foodId}`,
         app_key: `${foodKey}`,
         to: 8,
         image: ""
     }
+    let result = $.ajax({
+            /* update API end point */
+            url: FOOD_URL,
+            data: query,
+            dataType: "json",
+            /*set the call type GET / POST*/
+            type: "GET"
+        })
+        /* if the call is successful (status 200 OK) show results */
+        .done(function (result) {
+            /* if the results are meeningful, we can just console.log them */
+            console.log(result);
+            callbackFood(result);
+        })
+        /* if the call is NOT successful show errors */
+        .fail(function (jqXHR, error, errorThrown) {
+            console.log(jqXHR);
+            console.log(error);
+            console.log(errorThrown);
+        });
 
-    $.getJSON(FOOD_URL, query, callback)
 }
+
 
 //what to do with the Edamam data that's sent back
 function callbackFood(data) {
     console.log(data);
-    const display = data.hits.map((item, index) => renderRecipes(item));
+    let display = data.hits.map((item, index) => renderRecipes(item));
+    $("#recipeResults").html(display);
     $("#recipeResults").html(display);
 };
 
+
 //how to show Edamam data on the page.
 function renderRecipes(item) {
-    const label = item.recipe.label;
-    const image = item.recipe.image;
-    const originalRecipe = item.recipe.url;
+    let label = item.recipe.label;
+    let image = item.recipe.image;
+    let originalRecipe = item.recipe.url;
 
-    return `<div class="hover">
+    return `<div class="hover resultsBackground">
 <a href="${originalRecipe}" class="links"><h3>${label}</h3></a>
 <div><img src="${image}" alt="image of recipe dish"></div>
 
@@ -118,14 +139,33 @@ function youtubeRequest(searchTerm, callback) {
         key: `${youtubeKey}`,
         q: `The best recipe for ${searchTerm} in: name`
     }
-    $.getJSON(YOUTUBE_URL, query, callback)
+    let result = $.ajax({
+            /* update API end point */
+            url: YOUTUBE_URL,
+            data: query,
+            dataType: "json",
+            /*set the call type GET / POST*/
+            type: "GET"
+        })
+        /* if the call is successful (status 200 OK) show results */
+        .done(function (result) {
+            /* if the results are meeningful, we can just console.log them */
+            console.log(result);
+            callbackTube(result);
+        })
+        /* if the call is NOT successful show errors */
+        .fail(function (jqXHR, error, errorThrown) {
+            console.log(jqXHR);
+            console.log(error);
+            console.log(errorThrown);
+        });
 }
 
 
 //what to do with the data that is sent back from the YouTube request
 function callbackTube(data) {
     console.log(data);
-    const display = data.items.map((item, index) => render(item));
+    let display = data.items.map((item, index) => render(item));
     $("#youtubeResults").html(display);
 
 }
@@ -136,7 +176,7 @@ function render(item) {
     let title = item.snippet.title;
     let image = item.snippet.thumbnails.medium.url;
     return `<div class="youTubeContainer hover">
-<h3><a href= ${href} class="links">${title}</a></h3>
+<h3><a href= ${href} class="links resultsBackground">${title}</a></h3>
 <img src=${image} alt=${title}>
 <br/>
 <br/>

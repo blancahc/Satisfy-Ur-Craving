@@ -3,7 +3,7 @@
 }
 
 html {
-    background: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/background-pizza-11.jpg") no-repeat center center fixed;
+    background: url("http://sfwallpaper.com/images/background-food-2.jpg") no-repeat center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -14,18 +14,27 @@ html {
     display: none;
 }
 
+.restaurantPicture {
+    background: url("Restaurantpic.jpg") no-repeat center center;
+    height: 90%;
+    width: 90%;
+}
 
 a {
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .links {
     text-align: center;
-    color: mediumblue;
+    color: black;
 }
 
 .links:hover {
-    color: limegreen;
+    color: gray;
 }
 
 .youTubeContainer {
@@ -85,9 +94,17 @@ h4 {
     margin-right: 10%;
 }
 
+.resultsBackground {
+    background-color: white;
+    background-size: cover;
+    height: 400px;
+}
+
 #restaurantResults {
     margin-left: 0px;
     margin-right: 0px;
+
+
 }
 
 .column2 {
