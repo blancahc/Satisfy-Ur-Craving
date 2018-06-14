@@ -5,9 +5,9 @@ The Satisfy Your Craving app is designed for travelers, foodies, and cooking ent
 
 Home Page View
 :-------------------------:|:-------------------------:
-![Home Page]("Screenshot_of_Home_Page")
+![Home Page](Screenshot_of_Home_Page.PNG)
 User Results
-![User Results]("Screenshot_of_Results")
+![User Results](Screenshot_of_Results.PNG)
 
 ## User Cases
 This app is for any user who is hungry and would either like to cook the food they are craving or go to a restaurant to eat the food they're craving:
@@ -22,7 +22,7 @@ This app is for any user who is hungry and would either like to cook the food th
 ![Wireframe](Wireframe.jpg)
 
 ## Working Prototype
-You can access a working prototype of the app here: https://shakespeare-passport.herokuapp.com/
+You can access a working prototype of the app here: https://blancahc.github.io/Satisfy-Ur-Craving/
 
 ## Functionality
 The app's functionality includes:
