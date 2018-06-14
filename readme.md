@@ -1,42 +1,35 @@
-## "Shakespeare Passport" | Thinkful Node Capstone
-The Shakespeare Passport app is designed for Theatrical Performers, Theatre Goers, and Theatre enthusiast alike. It allows a User to compile a list of plays by SEEN, PERFORMED, and READ tracking date and location.
+## "Satisfy Your Craving" | Thinkful API Capstone
+The Satisfy Your Craving app is designed for travelers, foodies, and cooking enthusiasts alike. It allows a User to search for the food they are craving and get a list of video recipes, written recipes, and a list of restaurants.
 
 ## Screenshots
 
-Home Page View | Login Page View #2
+Home Page View
 :-------------------------:|:-------------------------:
-![Home Page](https://github.com/KatiLong/shakespeare-passport-node-capstone/blob/master/github-images/home-page.jpg)  |  ![Login Page](https://github.com/KatiLong/shakespeare-passport-node-capstone/blob/master/github-images/login.jpg)
-User Dashboard | Seen Entry
-![User Dashboard](https://github.com/KatiLong/shakespeare-passport-node-capstone/blob/master/github-images/user-dashboard.jpg) | ![Seen Entry](https://github.com/KatiLong/shakespeare-passport-node-capstone/blob/master/github-images/seen-entry.jpg)
-Add Entry  | Edit Entry
-![Add Entry](https://github.com/KatiLong/shakespeare-passport-node-capstone/blob/master/github-images/add-entry.jpg) | ![Edit Entry](https://github.com/KatiLong/shakespeare-passport-node-capstone/blob/master/github-images/edit-entry.jpg)
-Delete Entry |
-![Delete Entry](https://github.com/KatiLong/shakespeare-passport-node-capstone/blob/master/github-images/delete-entry.jpg) |
+![Home Page]("Screenshot_of_Home_Page")
+User Results
+![User Results]("Screenshot_of_Results")
 
 ## User Cases
-This app is for three types of users:
-1. READ - For Theatrical Students, so that they can track Plays that have been read (by title and author, optional edition) by date and include Notes.
-2. SEEN - For Theatre-Goers (enthusiasts, specialists, etc.), so that they can track all the shows the have seen, where and when they have seen them, and any specific Notes they would like to add.
-3. PERFORMED - For Theatrical Artists and Perfomers, so that they can record all shows they have performed in by Role, Location, Date and include Notes (and Lines).
+This app is for any user who is hungry and would either like to cook the food they are craving or go to a restaurant to eat the food they're craving:
+1. For those who prefer to cook and watch a video showing how to cook their craving step by step.
+2. For those who prefer to read a recipe and cook what they are craving.
+3. For those who would rather pay for someoene else to cook for them and go to a restaurant in the city of their choice.
 
 ### UI Flow
-![UI Flow handwritten draft](https://github.com/KatiLong/node-capstone/blob/master/github-images/node-capstone-user-flow.jpg)
+![UI Flow handwritten draft](User_Flow.jpg)
 
-### Wireframe _main
-![Wireframe _Main](https://github.com/KatiLong/node-capstone/blob/master/github-images/wireframe-v1.jpg)
+### Wireframe
+![Wireframe](Wireframe.jpg)
 
 ## Working Prototype
 You can access a working prototype of the app here: https://shakespeare-passport.herokuapp.com/
 
 ## Functionality
 The app's functionality includes:
-* Every User has the ability to create an account that stores information unique to them
-* User can Add Entries, Update Entries, and Delete Entries
-* User can sort entries by: Date & Type (Read, Seen, Performed)
+* Every User has the ability to search for the food they are craving and get a list of videos on how to prepare that food, written recipes and a list of nearby restaurant names with their addresses.
 
 ## Technology
 * Front-End: HTML5 | CSS3 | JavaScript ES6 | jQuery
-* Back-End: Node.js | Express.js | Mocha | Chai | RESTful API Endpoints | MongoDB | Mongoose
 
 
 
@@ -45,5 +38,5 @@ App is strongly built to be usuable on mobile devices, as well as responsive acr
 
 ## Development Roadmap
 This is v1.0 of the app, but future enhancements are expected to include:
-* Google Maps integrated to view all entries by location
-* Featured Theaters of the World Section
+* Map showing nearby restaurants of the food item searched
+* Actual restaurant pictures with customer reviews

@@ -3,11 +3,12 @@
 }
 
 html {
-    background: url("http://sfwallpaper.com/images/background-food-2.jpg") no-repeat center fixed;
+    background: url("foods.jpg") no-repeat center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: Roboto|Tajawal;
 }
 
 #edamam-badge {
@@ -18,6 +19,14 @@ html {
     background: url("Restaurantpic.jpg") no-repeat center center;
     height: 90%;
     width: 90%;
+}
+
+#addressBackground {
+    background-color: black;
+    color: white;
+    opacity: .90;
+    margin-right: 30px;
+    padding: 20px
 }
 
 a {
@@ -34,10 +43,10 @@ ul {
 }
 
 .links:hover {
-    color: gray;
+    color: white;
 }
 
-.youTubeContainer {
+.imageContainer {
     text-align: center;
 }
 
@@ -61,43 +70,61 @@ h1 {
     text-align: center;
     font-size: 3em;
     margin-top: 1%;
-    color: darkred;
-    background-color: white;
-    opacity: .70;
+    color: white;
+    background-color: red;
+    border-radius: 3px;
+    opacity: .90;
     width: 100%;
-
 }
 
 h2 {
     text-align: center;
-    color: red;
     font-size: 2em;
-    background-color: white;
+    color: white;
+    background-color: red;
+    border-radius: 3px;
+    opacity: .90;
+}
+
+h5 {
+    text-align: center;
+    color: black;
+    background-color: red;
+    border-radius: 3px;
+    opacity: .90;
+    font-size: 20px;
+    text-decoration: underline;
 }
 
 h3 {
     text-align: center;
-    font-weight: 900;
-    font-size: 1.3em;
     text-decoration: underline;
-    color: black;
+    background-color: red;
+    border-radius: 3px;
+    opacity: .90;
+    font-size: 20px;
+
 }
 
 h3:hover {
-    color: dark darkred;
+    color: white;
 }
 
 h4 {
-    color: black;
     font-size: 1.5em;
     margin-left: 10%;
     margin-right: 10%;
+    color: white;
+    background-color: black;
+    border-radius: 3px;
+    opacity: .80;
 }
 
 .resultsBackground {
-    background-color: white;
+    background-color: red;
     background-size: cover;
     height: 400px;
+    opacity: .95;
 }
 
 #restaurantResults {
@@ -107,55 +134,41 @@ h4 {
 
 }
 
+/*
 .column2 {
-    /*background-color: rgba(230, 225, 98, .8);*/
+    background-color: rgba(230, 225, 98, .8);
 }
+*/
 
 button {
-    border-top: 1px solid #96d1f8;
-    background: #d6a765;
-    background: -webkit-gradient(linear, left top, left bottom, from(#9c3e3e), to(#d6a765));
-    background: -webkit-linear-gradient(top, #9c3e3e, #d6a765);
-    background: -moz-linear-gradient(top, #9c3e3e, #d6a765);
-    background: -ms-linear-gradient(top, #9c3e3e, #d6a765);
-    background: -o-linear-gradient(top, #9c3e3e, #d6a765);
-    padding: 10.5px 21px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-    -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-    box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-    text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
     color: white;
-    font-size: 24px;
-    font-family: Georgia, Serif;
+    background-color: red;
+    border-radius: 3px;
+    opacity: .80;
+    font-size: 20px;
     text-decoration: none;
     vertical-align: middle;
+    font-family: Roboto|Tajawal;
 }
 
 button:hover {
-    border-top-color: #782828;
+    border-top-color: darkred;
     background: #782828;
     color: #ccc;
-}
-
-button:active {
-    border-top-color: #5c1b1b;
-    background: #5c1b1b;
 }
 
 .hover {
     transition: all .3s ease-out;
 }
 
+/*
 .hover:hover {
     background-color: white;
     box-shadow: 0 2px 0 rgba(159, 105, 240, .9);
     transform: translate(0px, -10px);
 
 }
-
+*/
 
 .inputGroup {
     text-align: center;
@@ -175,6 +188,7 @@ label {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1%;
+    background: black;
 }
 
 input {
@@ -188,7 +202,7 @@ input {
 }
 
 .labelText {
-    color: black;
+    color: white;
     font-size: 1.0em;
     font-family: 'Raleway', sans-serif;
     text-align: center;
@@ -208,11 +222,13 @@ input {
 
 img {
     width: 100%;
+    height: 50%;
 }
 
 #errorCity,
 #errorFood {
     color: red;
+    vertical-align: center;
 }
 
 
@@ -224,7 +240,7 @@ img {
     }
 
     img {
-        width: 50%;
+        width: 90%;
     }
 
     .hover {
@@ -250,6 +266,11 @@ img {
         margin-left: auto;
         margin-right: auto;
         width: 150%;
+    }
+
+    img {
+        width: 95%;
+        height: 90%;
     }
 
     input {

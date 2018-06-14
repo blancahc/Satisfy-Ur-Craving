@@ -50,23 +50,18 @@ function callbackRestaurant(data) {
 //how to show the data from foursquare on the page
 function renderRestaurants(item) {
     let restaurantName = item.venue.name;
-    let restaurantNumber = item.venue.contact.formattedPhone;
     let restaurantAddress = item.venue.location.address;
-    let restaurantUrl = item.venue.url;
-    let restaurantRating = item.venue.rating;
+    //    let restaurantUrl = item.venue.delivery;
+
     //    const restaurantMessage = item.tips["0"].text;
 
-    return `<div class="hover resultsBackground restaurantBackground">
-<div class="restaurantPicture">
+    return `<div class="imageContainer resultsBackground restaurantPicture">
 
-</div>
-<h3><a href='${restaurantUrl}' class='links'>${restaurantName}</a></h3>
-<ul>
-<li>Address: ${restaurantAddress || ""}</li>
+
+<h5>${restaurantName}</h5>
+<ul >
+<li id="addressBackground">Address: ${restaurantAddress || ""}</li>
 </ul>
-</br>
-</br>
-</br>
 </div>`
 
 }
@@ -122,7 +117,7 @@ function renderRecipes(item) {
     let image = item.recipe.image;
     let originalRecipe = item.recipe.url;
 
-    return `<div class="hover resultsBackground">
+    return `<div class="imageContainer resultsBackground">
 <a href="${originalRecipe}" class="links"><h3>${label}</h3></a>
 <div><img src="${image}" alt="image of recipe dish"></div>
 
@@ -175,8 +170,8 @@ function render(item) {
     let href = "https://www.youtube.com/watch?v=" + item.id.videoId;
     let title = item.snippet.title;
     let image = item.snippet.thumbnails.medium.url;
-    return `<div class="youTubeContainer hover">
-<h3><a href= ${href} class="links resultsBackground">${title}</a></h3>
+    return `<div class="imageContainer resultsBackground">
+<h3><a href= ${href} class="links">${title}</a></h3>
 <img src=${image} alt=${title}>
 <br/>
 <br/>
