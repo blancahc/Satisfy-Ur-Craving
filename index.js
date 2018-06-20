@@ -51,14 +51,11 @@ function callbackRestaurant(data) {
 function renderRestaurants(item) {
     let restaurantName = item.venue.name;
     let restaurantAddress = item.venue.location.address;
-    //    let restaurantUrl = item.venue.delivery;
 
-    //    const restaurantMessage = item.tips["0"].text;
-
-    return `<div class="imageContainer resultsBackground restaurantPicture">
+    return `<div class="imageContainer resultsBackground product-image restaurantPicture">
 
 
-<h5>${restaurantName}</h5>
+<h3>${restaurantName}</h3>
 <ul >
 <li id="addressBackground">Address: ${restaurantAddress || ""}</li>
 </ul>
@@ -119,11 +116,7 @@ function renderRecipes(item) {
 
     return `<div class="imageContainer resultsBackground">
 <a href="${originalRecipe}" class="links"><h3>${label}</h3></a>
-<div><img src="${image}" alt="image of recipe dish"></div>
-
-</br>
-</br>
-</br>
+<div class = "product-image" style="background-image: url(${image})" alt=${label}></div>
 </div>`
 }
 
@@ -172,10 +165,7 @@ function render(item) {
     let image = item.snippet.thumbnails.medium.url;
     return `<div class="imageContainer resultsBackground">
 <h3><a href= ${href} class="links">${title}</a></h3>
-<img src=${image} alt=${title}>
-<br/>
-<br/>
-<br/>
+<div class = "product-image" style="background-image: url(${image})" alt=${title}></div>
 </div>`;
 }
 
@@ -185,14 +175,13 @@ function submitHandler() {
         event.preventDefault();
         let searchTerm = $('#search').val();
         let city = $("#city").val();
+        $("#errorFood").html("");
+        $("#errorCity").html("");
 
-        if (searchTerm === "" && city === "") {
-            $("#errorFood").html("Oops, enter a food");
-            $("#errorCity").html("Oops, enter a city please");
+        if (searchTerm === "") {
+            $("#errorFood").html("Oops, enter a food please");
         } else if (city === "") {
             $("#errorCity").html("Oops, enter a city");
-        } else if (searchTerm === "") {
-            $("#errorFood").html("Oops, enter a food");
         } else {
             $("#errorCity").html("");
             $("#errorFood").html("");

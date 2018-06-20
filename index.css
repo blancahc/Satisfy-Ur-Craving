@@ -29,6 +29,16 @@ html {
     padding: 20px
 }
 
+.product-image {
+    width: 100%;
+    height: 12rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-position: center center;
+}
+
 a {
     text-decoration: none;
 }
@@ -39,11 +49,11 @@ ul {
 
 .links {
     text-align: center;
-    color: black;
+    color: white;
 }
 
 .links:hover {
-    color: white;
+    color: orangered;
 }
 
 .imageContainer {
@@ -71,7 +81,7 @@ h1 {
     font-size: 3em;
     margin-top: 1%;
     color: white;
-    background-color: red;
+    background-color: black;
     border-radius: 3px;
     opacity: .90;
     width: 100%;
@@ -81,39 +91,41 @@ h2 {
     text-align: center;
     font-size: 2em;
     color: white;
-    background-color: red;
+    background-color: black;
     border-radius: 3px;
     opacity: .90;
 }
 
 h5 {
     text-align: center;
-    color: black;
-    background-color: red;
+    color: white;
+    background-color: black;
     border-radius: 3px;
     opacity: .90;
     font-size: 20px;
-    text-decoration: underline;
 }
 
 h3 {
     text-align: center;
-    text-decoration: underline;
-    background-color: red;
+    /* text-decoration: underline; */
+    background-color: black;
     border-radius: 3px;
     opacity: .90;
     font-size: 20px;
-
+    height: 54px;
+    overflow: hidden;
+    padding-top: 10px;
 }
 
-h3:hover {
+.restaurantPicture h3 {
     color: white;
 }
 
+
 h4 {
     font-size: 1.5em;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 0%;
+    margin-right: 0%;
     color: white;
     background-color: black;
     border-radius: 3px;
@@ -121,10 +133,10 @@ h4 {
 }
 
 .resultsBackground {
-    background-color: red;
+    background-color: black;
     background-size: cover;
-    height: 400px;
     opacity: .95;
+    height: 16.5rem;
 }
 
 #restaurantResults {
@@ -141,14 +153,23 @@ h4 {
 */
 
 button {
+    background: #bf0c0c;
     color: white;
-    background-color: red;
-    border-radius: 3px;
-    opacity: .80;
-    font-size: 20px;
-    text-decoration: none;
-    vertical-align: middle;
-    font-family: Roboto|Tajawal;
+    padding: 0 30px 0;
+    opacity: .9;
+    border: 3px solid #bf0c0c;
+    font-size: 1.375rem;
+    line-height: 0;
+    line-height: 0rem;
+    -webkit-border-radius: 35px;
+    -khtml-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
+    border-radius: 35px;
+    position: relative;
+    display: inline-block;
+    line-height: 35px;
 }
 
 button:hover {
@@ -160,15 +181,6 @@ button:hover {
 .hover {
     transition: all .3s ease-out;
 }
-
-/*
-.hover:hover {
-    background-color: white;
-    box-shadow: 0 2px 0 rgba(159, 105, 240, .9);
-    transform: translate(0px, -10px);
-
-}
-*/
 
 .inputGroup {
     text-align: center;
@@ -185,15 +197,16 @@ label {
     display: block;
     width: 25%;
     text-align: left;
+    font-size: 16px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1%;
     background: black;
+    padding: 10px;
 }
 
 input {
     width: 100%;
-    height: 6vh;
     font-size: 1em;
     border: .5px solid rgba(159, 105, 240, .3);
     border-radius: 4px;
@@ -204,7 +217,6 @@ input {
 .labelText {
     color: white;
     font-size: 1.0em;
-    font-family: 'Raleway', sans-serif;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -216,10 +228,6 @@ input {
 
 }
 
-.moodInTitle {
-    color: rgba(240, 159, 32, .9);
-}
-
 img {
     width: 100%;
     height: 50%;
@@ -227,7 +235,7 @@ img {
 
 #errorCity,
 #errorFood {
-    color: red;
+    color: orange;
     vertical-align: center;
 }
 
@@ -282,6 +290,6 @@ img {
 
     label {
         text-align: center;
-        width: 45%;
+        width: 90%;
     }
 }
