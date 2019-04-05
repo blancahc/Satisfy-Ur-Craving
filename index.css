@@ -1,6 +1,6 @@
-* {
+*{
     box-sizing: border-box;
-}
+  }
 
 html {
     background: url("foods.jpg") no-repeat center fixed;
@@ -17,24 +17,22 @@ html {
 
 .restaurantPicture {
     background: url("Restaurantpic.jpg") no-repeat center center;
-    height: 90%;
-    width: 90%;
+    border-radius: 10px;
 }
 
 #addressBackground {
-    background-color: black;
-    color: white;
+    background-color: #fff;
     opacity: .90;
-    margin-right: 30px;
-    padding: 20px
+    padding: 20px;
+    height: 250px;
+    font-size: 20px;
 }
 
 .product-image {
-    width: 100%;
-    height: 12rem;
+    height: 250px;
     border-radius: 10px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-size: cover;
     background-position: center center;
 }
@@ -43,8 +41,11 @@ a {
     text-decoration: none;
 }
 
-ul {
+:-moz-user-disabled{
     list-style-type: none;
+    display: block;
+    margin: 0px;
+    width: 100%;
 }
 
 .links {
@@ -58,6 +59,7 @@ ul {
 
 .imageContainer {
     text-align: center;
+    margin-top: 20px;
 }
 
 .column {
@@ -65,8 +67,6 @@ ul {
     margin: 1.5%;
     padding: 2%;
     float: left;
-
-
 }
 
 .row:after {
@@ -79,12 +79,12 @@ ul {
 h1 {
     text-align: center;
     font-size: 3em;
-    margin-top: 1%;
     color: white;
     background-color: black;
     border-radius: 3px;
     opacity: .90;
     width: 100%;
+    margin: auto;
 }
 
 h2 {
@@ -94,6 +94,7 @@ h2 {
     background-color: black;
     border-radius: 3px;
     opacity: .90;
+    margin: auto;
 }
 
 h5 {
@@ -103,11 +104,11 @@ h5 {
     border-radius: 3px;
     opacity: .90;
     font-size: 20px;
+    margin: auto;
 }
 
 h3 {
     text-align: center;
-    /* text-decoration: underline; */
     background-color: black;
     border-radius: 3px;
     opacity: .90;
@@ -115,42 +116,26 @@ h3 {
     height: 54px;
     overflow: hidden;
     padding-top: 10px;
+    margin; auto;
 }
-
-.restaurantPicture h3 {
-    color: white;
+.restaurantName {
+    color: #fff;
 }
-
 
 h4 {
     font-size: 1.5em;
-    margin-left: 0%;
-    margin-right: 0%;
-    color: white;
-    background-color: black;
+    margin: 10px auto;
+    color: #bf0c0c;
     border-radius: 3px;
-    opacity: .80;
+    width: 40%;
 }
 
 .resultsBackground {
     background-color: black;
-    background-size: cover;
     opacity: .95;
-    height: 16.5rem;
+    height: 350px;
+    border-radius: 5px;
 }
-
-#restaurantResults {
-    margin-left: 0px;
-    margin-right: 0px;
-
-
-}
-
-/*
-.column2 {
-    background-color: rgba(230, 225, 98, .8);
-}
-*/
 
 button {
     background: #bf0c0c;
@@ -186,7 +171,7 @@ button:hover {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10%;
+    margin-bottom: 20px;
 }
 
 .form {
@@ -228,11 +213,6 @@ input {
 
 }
 
-img {
-    width: 100%;
-    height: 50%;
-}
-
 #errorCity,
 #errorFood {
     color: orange;
@@ -244,12 +224,7 @@ img {
 
     .column {
         width: 100%;
-
-    }
-
-    img {
-        width: 90%;
-    }
+        text-align: center;
 
     .hover {
         width: 75%;
@@ -274,11 +249,6 @@ img {
         margin-left: auto;
         margin-right: auto;
         width: 150%;
-    }
-
-    img {
-        width: 95%;
-        height: 90%;
     }
 
     input {
